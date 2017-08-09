@@ -18,7 +18,8 @@ fn main() {
         .ok()
         .expect("Error while reading the input");
 
-    // input => int
+    // we don't want to cast here so we try to parse the input. on sucess, the new input var
+    // will shadow the old one but with a new type = u32. sweeet
     let input: u32 = input.trim().parse()
         .ok()
         .expect("please type a number!");
