@@ -7,6 +7,9 @@ fn main() {
 
     println!("collectors");
     collect();
+
+    println!("adapter");
+    adapter();
 }
 
 fn the_hard_way() {
@@ -47,4 +50,10 @@ fn collect() {
     println!("reduce");
     let res = (0..11).fold(0, |sum, x | x + sum);
     println!("{}", res);
+}
+
+fn adapter() {
+    for i in (0..10).map(|x| x + 10) {
+        println!("{}", i);
+    }
 }
